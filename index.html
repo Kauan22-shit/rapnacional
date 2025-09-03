@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rap Nacional Brasileiro - Racionais MC's e Sabotagem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a, #444);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ac6b179d-0ca3-4081-9022-737fef7fb8d7.png') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 1;
+        }
+        .section {
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            max-width: 1400px;
+        }
+        .artist-card {
+            background-color: #161616;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+        .artist-card:hover {
+            transform: translateY(-5px);
+        }
+        .song-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+        .song-list li {
+            background-color: #222;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 5px solid #ff6b35;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255,107,53,0.5);
+        }
+        .timeline {
+            position: relative;
+            padding: 1rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ff6b35;
+        }
+        .timeline-item {
+            margin-left: 60px;
+            margin-bottom: 1rem;
+            background: #222;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn {
+            background-color: #ff6b35;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e55a2b;
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 2rem 1rem; }
+            .song-list { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero fade-in">
+        <h1 class="text-5xl font-bold mb-4">Rap Nacional Brasileiro</h1>
+        <p class="text-xl">Uma jornada profunda pelo movimento hip-hop do Brasil, destacando ícones como Racionais MC's e Sabotagem</p>
+    </header>
+
+    <nav class="bg-gray-900 py-4 sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="#historia" class="text-white hover:text-orange-400">História</a></li>
+                <li><a href="#racionais" class="text-white hover:text-orange-400">Racionais MC's</a></li>
+                <li><a href="#sabotagem" class="text-white hover:text-orange-400">Sabotagem</a></li>
+                <li><a href="#galeria" class="text-white hover:text-orange-400">Galeria</a></li>
+                <li><a href="#recomendacoes" class="text-white hover:text-orange-400">Recomendações</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="historia" class="section bg-gray-800">
+            <h2 class="text-3xl font-bold mb-4 text-center">História do Rap Nacional</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <h3 class="text-xl font-semibold">Década de 1980: Primeiros Passos</h3>
+                    <p>O rap chegou ao Brasil influenciado pela cultura hip-hop americana. Grupos pioneiros emergiram no Rio de Janeiro e São Paulo, misturando beats com ritmos locais.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <h3 class="text-xl font-semibold">Década de 1990: Consolidação</h3>
+                    <p>Racionais MC's lançaram "Holocausto Urbano" em 1990, marcando a virada para temas sociais. Sabotagem tornou-se ícone com o single "Rap é Compromisso" em 1992.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <h3 class="text-xl font-semibold">2000s: Expansão e Diversidade</h3>
+                    <p>O gênero expandiu-se para o nordeste e sul, com artistas como Criolo, Emicida e rapper paulistas. O rap ganhou mainstream com comerciais e shows massivos.</p>
+                </div>
+                <div class="timeline-item fade-in">
+                    <h3 class="text-xl font-semibold">Hoje: Voz contra Injustiças</h3>
+                    <p>O rap brasileiro é uma ferramenta de conscientização social, abordando racismo, violência policial e desigualdade, influenciando gerações.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="racionais" class="section">
+            <h2 class="text-3xl font-bold mb-6 text-center">Racionais MC's</h2>
+            <div class="artist-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b45c8b96-ae26-4f1a-8444-57f3a7859942.png" alt="Grupo Racionais MC's em apresentação ao vivo com integrantes em palco sob luzes dramáticas, vestindo roupas escuras e com microfones, representando o hip-hop brasileiro com temas sociais" class="mb-4" />
+                <p class="mb-4">Formado em 1988 em São Paulo, o Racionais MC's é composto por Mano Brown, Ice Blue, Edi Rock e KL Jay. Eles são pioneiros no rap nacional, com letras que denunciam opressão racial, violência urbana e desigualdade social. Seus álbuns venderam milhões e influenciaram o gênero globalmente.</p>
+                <h3 class="text-2xl mb-2">Discografia Principal</h3>
+                <ul class="mb-4">
+                    <li>Escolha o Seu Caminho (1992)</li>
+                    <li>Racionais MC's (1993)</li>
+                    <li>Sobrevivendo no Inferno (1997)</li>
+                    <li>Nada Como um Dia Após o Outro (2002)</li>
+                </ul>
+                <h3 class="text-2xl mb-2">Melhores Músicas e Trechos Icônicos</h3>
+                <ul class="song-list mb-4">
+                    <li><strong>Negro Drama:</strong> "Sou negro, sim, sou forte, vou lutar" – Sobre a luta contra o racismo.</li>
+                    <li><strong>Fim de Semana no Parque:</strong> "Quer ficar ligado de verdade?" – Retrata a vida periférica.</li>
+                    <li><strong>Vida Loka Pt. 1:</strong> "Eu to na minha, hoje eu fumo" – Reflexão sobre a realidade das ruas.</li>
+                    <li><strong>Capítulo 4, Versículo 3:</strong> "Deus é por nós" – Mensagem espiritual e esperança.</li>
+                    <li><strong>Diário de um Detento:</strong> "Não vou chorar se eu cair" – Narrativa de prisão e justiça.</li>
+                    <li><strong>Juízes da Verdade:</strong> "Julgai a vós mesmos" – Crítica ao sistema judiciário.</li>
+                </ul>
+                <button class="btn" onclick="toggleInfo('racionais-more')">Saiba Mais sobre os Integrantes</button>
+                <div id="racionais-more" class="hidden mt-4">
+                    <p>Mano Brown é o líder carismático, conhecido por sua voz potente e ativismo. Ice Blue traz melodia, Edi Rock e KL Jay completam com batidas e flows únicos. O grupo foi indicado ao Grammy Latino.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sabotagem" class="section bg-gray-800">
+            <h2 class="text-3xl font-bold mb-6 text-center">Sabotagem</h2>
+            <div class="artist-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e55a4b9f-e77d-47a2-8baa-7a87c3beddce.png" alt="Integrante do Sabotagem rapping intensamente em estúdio com base de bateria, microfones antigos e fundo urbano grafitado, capturando a energia latina do rap brasileiro" class="mb-4" />
+                <p class="mb-4">Nilton Aldair dos Santos Neto, mais conhecido como Sabotagem ou DJ Thai, nasceu em 1967 no Rio de Janeiro. Ele foi um dos fundadores do rap carioca, influenciado pelo funk e samba, mas trouxe a essência hip-hop. Infelizmente, faleceu em 2003, mas seu legado persiste.</p>
+                <h3 class="text-2xl mb-2">Principais Três de Rimas e DJ Sets</h3>
+                <ul class="mb-4">
+                    <li>De Baixo de Copacabana (1992)</li>
+                    <li>Mestre Cervejeiro (1993)</li>
+                    <li>Armamento (1997)</li>
+                </ul>
+                <h3 class="text-2xl mb-2">Melhores Músicas e Versos Notáveis</h3>
+                <ul class="song-list mb-4">
+                    <li><strong>Rap é Compromisso! (com Racionais MC's):</strong> "Rap é compromisso, rap é voz rebelde" – Colaboração histórica.</li>
+                    <li><strong>Carta a um Jovem MC:</strong> "Use sua arte pra conscientizar" – Conselho para jovens rappers.</li>
+                    <li><strong>Introdução:</strong> "Nazak é pra cima" – Define o estilo do grupo.</li>
+                    <li><strong>Rendido à Proto-Empatia:</strong> "Proto-empatia, amizade pura" – Explora conexões humanas.</li>
+                    <li><strong>Vivão e Vivendo:</strong> "Vivão, tá ligado?" – Sobre viver plenamente.</li>
+                    <li><strong>A Orangotango:</strong> "Ela deu uma sorrida" – Narrativa divertida e rítmica.</li>
+                </ul>
+                <button class="btn" onclick="toggleInfo('sabotagem-more')">Legado Futuro</button>
+                <div id="sabotagem-more" class="hidden mt-4">
+                    <p>Sabotagem influenciou gerações, misturando rap com samba funk. O documentário "Sabotagem: Vida Loka" mostra sua jornada. Ele premia o "Melhor DJ" brasileiro por anos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section">
+            <h2 class="text-3xl font-bold mb-6 text-center">Galeria de Imagens</h2>
+            <div class="gallery">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/51278f2d-19f0-4968-bed8-ee46a9ba2080.png" alt="Capa do álbum Sobrevivendo no Inferno dos Racionais MC's com design em vermelho e preto, mostrando elementos urbanos e simbólicos de luta social" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/90c387bb-04be-4d89-9495-586788287913.png" alt="Sabotagem em performance no palco com público animado, em ambiente de show noturno com luzes coloridas e energia intensa" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e59c27ae-5099-4588-86c4-0f4abb9aaa65.png" alt="Cinturaço visual de rua brasileira com grafites de rap, jovens rappers e cultura hip-hop misturada com samba e funk" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/28fb17c5-437c-4c4d-a6dd-c9e3a515557c.png" alt="Mural de grafite urbano em São Paulo mostrando Racionais MC's com letras icônicas e tons vibrantes de laranja e azul, representando a profunda influência do grupo na cultura periférica" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63a5677c-5a69-4879-aa50-2194847c67f7.png" alt="Evento de hip-hop brasileiro com DJs girando discos, MCs mic no palco e multidão dançando, capturando a energia coletiva e diversidade cultural" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/286b222a-a2bf-49f7-aa50-ccd130ddda6d.png" alt="Capa vintage do CD Mestre Cervejeiro de Sabotagem com arte psicodélica, cores vivas e elementos cariocas como praia e prédios altos" />
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d9086f0f-32b8-4191-9f8a-0dabd4457524.png" alt="Rappers jovens negras inspiradas por Racionais MC's, vestindo roupas caras e performando em esquina com beats de funk, iluminadas por luzes da cidade à noite" />
+            </div>
+        </section>
+
+        <section id="recomendacoes" class="section bg-gray-800">
+            <h2 class="text-3xl font-bold mb-6 text-center">Recomendações e Conteúdo Extra</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-2xl mb-2">Outros Artistas Influenciados</h3>
+                    <ul>
+                        <li>Criolo: "Não Existe Amor em SP"</li>
+                        <li>Emicida: "INFLUÊNCIA"</li>
+                        <li>RZA: Braades (temática social)</li>
+                        <li>Manoel G. Austregesilo: Poeta do rap conscientizatório</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl mb-2">Onde Ouvrir</h3>
+                    <p>Plataformas como Spotify, Deezer e YouTube têm playlists dedicadas. Busque por "Rap Nacional Brasileiro" para descobertas.</p>
+                    <h3 class="text-xl mb-2">Documentários</h3>
+                    <ul>
+                        <li>"1 Olho no Fim da Mina, Outro no Branco do Vale" sobre cultura negra.</li>
+                        <li>"Sabotagem: Vida Loka" – Biografia do rapper.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-2xl mb-2">Liste Sua Música Favorita</h3>
+                <input type="text" id="favSong" placeholder="Digite o nome de sua música preferida" class="w-full p-2 rounded bg-gray-700 text-white" />
+                <button class="btn mt-2" onclick="addFavSong()">Adicionar à Lista</button>
+                <ul id="favList" class="mt-4 song-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 py-8 text-center">
+        <p>© 2023 Rap Nacional Brasileiro. Criado com paixão pelo hip-hop. Feito para educar e celebrar a cultura.</p>
+        <div id="counter" class="mt-2">Visitantes: 0</div>
+    </footer>
+
+    <script>
+        function toggleInfo(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
+        let favSongs = JSON.parse(localStorage.getItem('favSongs') || '[]');
+        function displayFavSongs() {
+            const list = document.getElementById('favList');
+            list.innerHTML = '';
+            favSongs.forEach(song => {
+                const li = document.createElement('li');
+                li.textContent = song;
+                list.appendChild(li);
+            });
+        }
+        function addFavSong() {
+            const song = document.getElementById('favSong').value.trim();
+            if (song && !favSongs.includes(song)) {
+                favSongs.push(song);
+                localStorage.setItem('favSongs', JSON.stringify(favSongs));
+                displayFavSongs();
+                document.getElementById('favSong').value = '';
+            }
+        }
+        displayFavSongs();
+
+        // Counter de visitantes com persistência
+        let visitCount = parseInt(localStorage.getItem('visitCount') || '0');
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+        document.getElementById('counter').textContent = 'Visitantes: ' + visitCount;
+
+        // Efeitos de fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section, .artist-card, .timeline-item').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+</content>
+</create_file>
